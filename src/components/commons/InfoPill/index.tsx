@@ -1,17 +1,12 @@
 import styles from './styles.module.css';
 import Image from 'next/image';
-const InfoPill = () => {
+const InfoPill = ({ image, title, info }) => {
   return (
     <div className={styles.info_pill}>
-      <Image
-        src=''
-        alt=''
-        width={40}
-        height={40}
-      />
+      <Image src={image} alt='' width={40} height={40} />
       <div className={styles.container}>
-      <p className={styles.title}>Creator</p>
-      <p className={styles.info}>Enrico Cole</p>
+        <p className={styles.title}>{title}</p>
+        <p className={styles.info}>{info}</p>
       </div>
     </div>
   );

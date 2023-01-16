@@ -3,7 +3,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 4rem 2rem 4.5rem;
+  padding: 0 0 4rem;
 }
 
 .description {
@@ -13,6 +13,7 @@
   font-weight: 700;
   line-height: 1.2;
   text-transform: uppercase;
+  order: -1;
 }
 .slogan {
   color: var(--neutrals-8);

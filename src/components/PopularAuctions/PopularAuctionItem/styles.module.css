@@ -1,0 +1,25 @@
+.auction {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 16px;
+}
+.title {
+  color: var(--neutrals-8);
+  font-family: 'DM Sans';
+  font-weight: 700;
+  font-size: 4rem;
+  letter-spacing: -0.02em;
+  margin-bottom: 20px;
+}
+.about {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}

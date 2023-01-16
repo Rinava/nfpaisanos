@@ -3,6 +3,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+
 }
 
 .title {
@@ -10,6 +11,7 @@
   font-weight: 400;
   font-size: 0.75rem;
   line-height: 1.67;
+  white-space: pre;
 }
 
 .info {
@@ -17,6 +19,7 @@
   font-weight: 500;
   font-size: 0.87rem;
   line-height: 1.71;
+  white-space: pre;
 }
 
 .container {

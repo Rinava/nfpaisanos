@@ -6,9 +6,9 @@ const Header = () => {
   return (
     <header className={styles.header}>
       <Logo />
-      <div className={styles.icon_wrapper} aria-label='Menu'>
+      <button className={styles.menu} aria-label='Menu' onClick={ () => {}}>
         <BurgerIcon />
-      </div>
+      </button>
     </header>
   );
 };

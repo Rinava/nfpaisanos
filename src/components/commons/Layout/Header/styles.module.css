@@ -8,6 +8,8 @@
   align-items: center;
   padding: 3rem 2.3rem 1.5rem 2rem;
 }
-.icon_wrapper {
+.menu {
   line-height: 0;
+  background-color: rgba(0, 0, 0, 0);
+  border: none;
 }
