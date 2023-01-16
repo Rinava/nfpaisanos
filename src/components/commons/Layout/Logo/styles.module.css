@@ -1,0 +1,15 @@
+.title {
+  color: var(--neutrals-7);
+  font-size: 1.5rem;
+  font-weight: 600;
+  line-height: 1.33;
+  letter-spacing: -0.02em;
+  font-family: 'Poppins';
+  padding-left: 8px;
+}
+.logo {
+  display: flex;
+}
+.icon_wrapper {
+  line-height: 0;
+}
