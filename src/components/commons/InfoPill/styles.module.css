@@ -1,0 +1,26 @@
+.info_pill {
+  font-family: 'Poppins';
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.title {
+  color: var(--neutrals-4);
+  font-weight: 400;
+  font-size: 0.75rem;
+  line-height: 1.67;
+}
+
+.info {
+  color: var(--neutrals-8);
+  font-weight: 500;
+  font-size: 0.87rem;
+  line-height: 1.71;
+}
+
+.container {
+  margin-left: 0.5rem;
+  display: flex;
+  flex-direction: column;
+}
