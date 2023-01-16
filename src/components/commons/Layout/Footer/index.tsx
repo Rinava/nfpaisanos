@@ -7,7 +7,7 @@ const Footer = () => {
         <Logo />
         <h2 className={styles.slogan}>the new creative economy.</h2>
       </div>
-      <p className={styles.credits}>Created with ❤ by Lara Mateo</p>
+      <p className={styles.credits}>Created with ❤️ by Lara Mateo</p>
     </footer>
   );
 };

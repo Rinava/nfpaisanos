@@ -1,0 +1,10 @@
+.button{
+    border: 2px  solid  var(--neutrals-4);
+    border-radius:  90px ;
+    background-color: rgba(0, 0, 0, 0);
+    padding: 1rem 1.5rem;
+    font-family: 'DM Sans';
+    color:var(--neutrals-8);
+    font-weight: 700;
+    font-size: 1rem;
+}
