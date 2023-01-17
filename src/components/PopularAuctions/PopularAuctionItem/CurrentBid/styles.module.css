@@ -1,0 +1,59 @@
+.currentBid {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--neutrals-2);
+  border-radius: 1.5rem;
+  padding: 2rem;
+  margin: 2.5rem 0;
+  box-shadow: 0px 64px 64px -48px rgba(31, 47, 70, 0.12);
+}
+.title,
+.end {
+  font-family: 'Poppins';
+  font-weight: 500;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  color: var(--neutrals-8);
+}
+.value {
+  font-family: 'DM Sans';
+  font-weight: 700;
+  font-size: 3rem;
+  line-height: 1.17;
+  letter-spacing: -0.02em;
+  color: var(--neutrals-8);
+}
+.usd_value {
+  font-family: 'Poppins';
+  font-weight: 600;
+  font-size: 1.5rem;
+  line-height: 1.33;
+  color: var(--neutrals-4);
+}
+.end{
+    padding:24px 0 8px 0;
+}
+.timer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1.25rem;
+}
+
+.timer_item_value {
+  font-family: 'DM Sans';
+  font-weight: 700;
+  font-size: 2rem;
+  line-height: 1.25;
+  letter-spacing: -0.01em;
+  color: var(--neutrals-8);
+}
+.timer_item_title {
+  font-family: 'Poppins';
+  font-weight: 500;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: var(--neutrals-4);
+}

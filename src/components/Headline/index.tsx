@@ -1,6 +1,7 @@
 import styles from './styles.module.css';
 import Button from '../commons/Button';
-const ContentBlock = () => {
+
+const Headline = () => {
   return (
     <section className={styles.content_block}>
       <h1 className={styles.slogan}>The new creative economy.</h1>
@@ -13,4 +14,4 @@ const ContentBlock = () => {
     </section>
   );
 };
-export default ContentBlock;
+export default Headline;

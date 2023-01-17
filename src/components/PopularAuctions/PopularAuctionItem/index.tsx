@@ -1,6 +1,7 @@
 import styles from './styles.module.css';
 import Image from 'next/image';
 import InfoPill from '@/components/commons/InfoPill';
+import CurrentBid from './CurrentBid';
 
 const PopularAuctionItem = ({ auction }) => {
   const { author, authorAvatar, instantPrice, media } = auction;
@@ -15,7 +16,7 @@ const PopularAuctionItem = ({ auction }) => {
       />
       <div className={styles.content}>
         <h3 className={styles.title}>Marco carrillo®</h3>
-        <div  className={styles.about}>
+        <div className={styles.about}>
           <InfoPill image={authorAvatar} info={author} title='Creator' />
           <InfoPill
             image='/instant-price.svg'
@@ -24,6 +25,7 @@ const PopularAuctionItem = ({ auction }) => {
           />
         </div>
       </div>
+      <CurrentBid />
     </article>
   );
 };

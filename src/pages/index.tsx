@@ -1,6 +1,6 @@
 import { getCurrentETHPrice, getPopularAuctions } from '@/lib/api';
 import PopularAuctions from '@/components/PopularAuctions';
-import ContentBlock from '@/components/ContentBlock';
+import Headline from '@/components/Headline';
 
 interface Props {
   ethUsdPrice: {
@@ -8,10 +8,11 @@ interface Props {
     eth: number;
   };
 }
+
 export default function Home({ ethUsdPrice, popularAuctions }: Props) {
   return (
     <>
-      <ContentBlock />
+      <Headline />
       <PopularAuctions auctions={popularAuctions.slice(0, 1)} />
     </>
   );
