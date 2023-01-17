@@ -32,7 +32,10 @@ const PopularAuction = ({ auction }: PopularAuctionProps) => {
         </div>
       </div>
       <CurrentBid className={styles.current_bid} auction={auction} />
-      <Button className={styles.bid_button} onClick={() => {}}>
+      <Button
+        variant='primary'
+        className={styles.bid_button}
+        onClick={() => {}}>
         Place a bid
       </Button>
       <Button onClick={() => {}}>View item</Button>

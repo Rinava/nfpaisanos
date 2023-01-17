@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { ArrowIcon } from '../commons/Icons';
 import Button from '../commons/Button';
 import PopularAuction from './components/PopularAuction';
 import styles from './styles.module.css';
@@ -22,11 +23,17 @@ const PopularAuctions = ({ auctions }: PopularAuctionsProps) => {
     <section>
       <PopularAuction auction={auctions[currentIndex]} />
       <div className={styles.controls}>
-        <Button className={styles.control} onClick={handlePrevious}>
-          {'<'}
+        <Button
+          className={styles.control}
+          onClick={handlePrevious}
+          aria-label='Previous'>
+          <ArrowIcon direction='scale(-1,1)' />
         </Button>
-        <Button className={styles.control} onClick={handleNext}>
-          {'>'}
+        <Button
+          className={styles.control}
+          onClick={handleNext}
+          aria-label='Next'>
+          <ArrowIcon />
         </Button>
       </div>
     </section>
