@@ -1,10 +1,16 @@
 import styles from './styles.module.css';
 import Image from 'next/image';
 import InfoPill from '@/components/commons/InfoPill';
-import CurrentBid from './CurrentBid';
+import CurrentBid from '../CurrentBid';
+import Button from '@/components/commons/Button';
 
-const PopularAuctionItem = ({ auction }) => {
+interface PopularAuctionProps {
+  auction: any;
+}
+
+const PopularAuction = ({ auction }: PopularAuctionProps) => {
   const { author, authorAvatar, instantPrice, media } = auction;
+
   return (
     <article className={styles.auction}>
       <Image
@@ -25,9 +31,13 @@ const PopularAuctionItem = ({ auction }) => {
           />
         </div>
       </div>
-      <CurrentBid />
+      <CurrentBid className={styles.current_bid} auction={auction} />
+      <Button className={styles.bid_button} onClick={() => {}}>
+        Place a bid
+      </Button>
+      <Button onClick={() => {}}>View item</Button>
     </article>
   );
 };
 
-export default PopularAuctionItem;
+export default PopularAuction;

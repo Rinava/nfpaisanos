@@ -1,4 +1,4 @@
-const baseUrl = process.env.BASE_URL;
+const baseApiUrl = process.env.BASE_API_URL;
 const apiKey = process.env.API_KEY; 
 
 const config = {
@@ -9,13 +9,19 @@ const config = {
 
 
 export const getCurrentETHPrice = async () => {
-    const response = await fetch(`${baseUrl}/nfpaisanos/eth-price`, config);
+    const response = await fetch(`${baseApiUrl}/nfpaisanos/eth-price`, config);
     const data = await response.json();
     return data;
 }
 
 export const getPopularAuctions = async () => {
-    const response = await fetch(`${baseUrl}/nfpaisanos/popular`, config);
+    const response = await fetch(`${baseApiUrl}/nfpaisanos/popular`, config);
+    const data = await response.json();
+    return data;
+}
+
+export const getAuctions = async () => {
+    const response = await fetch(`${baseApiUrl}/nfpaisanos/aunctions`, config);
     const data = await response.json();
     return data;
 }

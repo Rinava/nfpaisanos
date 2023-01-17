@@ -7,9 +7,11 @@
   font-family: 'Poppins';
   padding-left: 8px;
 }
+
 .logo {
   display: flex;
 }
+
 .icon_wrapper {
   line-height: 0;
 }

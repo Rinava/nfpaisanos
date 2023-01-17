@@ -1,12 +1,34 @@
-import PopularAuctionItem from './PopularAuctionItem';
+import { useState } from 'react';
+import Button from '../commons/Button';
+import PopularAuction from './components/PopularAuction';
 import styles from './styles.module.css';
 
-const PopularAuctions = ({ auctions }) => {
+interface PopularAuctionsProps {
+  auctions: any[];
+}
+
+const PopularAuctions = ({ auctions }: PopularAuctionsProps) => {
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  const handleNext = () => {
+    currentIndex < auctions.length - 1 && setCurrentIndex(currentIndex + 1);
+  };
+
+  const handlePrevious = () => {
+    currentIndex > 0 && setCurrentIndex(currentIndex - 1);
+  };
+
   return (
     <section>
-      {auctions.map((auction) => {
-        return <PopularAuctionItem key={auction.id} auction={auction} />;
-      })}
+      <PopularAuction auction={auctions[currentIndex]} />
+      <div className={styles.controls}>
+        <Button className={styles.control} onClick={handlePrevious}>
+          {'<'}
+        </Button>
+        <Button className={styles.control} onClick={handleNext}>
+          {'>'}
+        </Button>
+      </div>
     </section>
   );
 };

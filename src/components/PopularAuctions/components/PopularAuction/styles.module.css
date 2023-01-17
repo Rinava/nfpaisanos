@@ -3,12 +3,15 @@
   flex-direction: column;
   justify-content: center;
 }
+
 .image {
   width: 100%;
   height: 100%;
   object-fit: cover;
   border-radius: 16px;
+  margin-bottom: 2rem;
 }
+
 .title {
   color: var(--neutrals-8);
   font-family: 'DM Sans';
@@ -16,10 +19,20 @@
   font-size: 4rem;
   letter-spacing: -0.02em;
   margin-bottom: 20px;
+  line-height: 1;
 }
+
 .about {
   display: flex;
-  justify-content: center;
   gap: 2rem;
-  flex-wrap: wrap;
+  max-width: 100%;
+  overflow: hidden;
+}
+
+.current_bid {
+  margin-bottom: 40px;
+}
+
+.bid_button {
+  margin-bottom: 0.5rem;
 }

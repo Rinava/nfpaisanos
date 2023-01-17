@@ -1,4 +1,4 @@
-.content_block {
+.headline {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -15,6 +15,7 @@
   text-transform: uppercase;
   order: -1;
 }
+
 .slogan {
   color: var(--neutrals-8);
   font-family: 'DM Sans';

@@ -1,32 +1,33 @@
-import { getCurrentETHPrice, getPopularAuctions } from '@/lib/api';
+import { getPopularAuctions, getAuctions } from '@/lib/api';
 import PopularAuctions from '@/components/PopularAuctions';
 import Headline from '@/components/Headline';
+import Auctions from '@/components/Auctions';
 
 interface Props {
-  ethUsdPrice: {
-    usd: number;
-    eth: number;
-  };
+  popularAuctions: any[];
+  auctions: any[];
 }
 
-export default function Home({ ethUsdPrice, popularAuctions }: Props) {
+export default function Home({ popularAuctions, auctions }: Props) {
   return (
     <>
       <Headline />
-      <PopularAuctions auctions={popularAuctions.slice(0, 1)} />
+      <PopularAuctions auctions={popularAuctions} />
+      <Auctions auctions={auctions} />
     </>
   );
 }
 
 export const getStaticProps = async () => {
-  const ethUsdPrice = await getCurrentETHPrice();
   const popularAuctions = await getPopularAuctions();
+  const auctions = await getAuctions();
 
   return {
     props: {
-      ethUsdPrice,
       popularAuctions,
+      auctions,
     },
+
     revalidate: 10,
   };
 };
