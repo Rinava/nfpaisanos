@@ -1,7 +1,22 @@
+.popular_auctions {
+  margin-bottom: 4rem;
+}
 .controls {
   display: flex;
   justify-content: center;
   align-items: center;
   margin-top: 40px;
   gap: 0.5rem;
+}
+
+.control {
+  border: 2px solid var(--neutrals-3);
+  border-radius: 2.5rem;
+  padding: 0;
+}
+
+.disabled {
+  opacity: 0.5;
+  border: none;
+  pointer-events: none;
 }

@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { ArrowIcon } from '../commons/Icons';
+import clsx from 'clsx';
 import Button from '../commons/Button';
 import PopularAuction from './components/PopularAuction';
 import styles from './styles.module.css';
@@ -20,18 +21,27 @@ const PopularAuctions = ({ auctions }: PopularAuctionsProps) => {
   };
 
   return (
-    <section>
+    <section className={styles.popular_auctions}>
       <PopularAuction auction={auctions[currentIndex]} />
       <div className={styles.controls}>
         <Button
-          className={styles.control}
+          variant='text'
+          className={clsx(
+            styles.control,
+            currentIndex === 0 && styles.disabled
+          )}
           onClick={handlePrevious}
-          aria-label='Previous'>
+          aria-label='Previous'
+          disabled={currentIndex === 0}>
           <ArrowIcon direction='scale(-1,1)' />
         </Button>
         <Button
-          className={styles.control}
+          className={clsx(
+            styles.control,
+            currentIndex === auctions.length - 1 && styles.disabled
+          )}
           onClick={handleNext}
+          disabled={currentIndex === auctions.length - 1}
           aria-label='Next'>
           <ArrowIcon />
         </Button>
