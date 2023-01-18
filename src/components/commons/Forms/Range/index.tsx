@@ -1,11 +1,14 @@
 import styles from './styles.module.css';
+import Label from '../Label';
 
 interface RangeProps {}
 
 const Range = (props: RangeProps) => {
   return (
     <div className={styles.slider_container}>
-      <label htmlFor='range'>Price Range</label>
+      <Label className={styles.label} htmlFor='range'>
+        Price Range
+      </Label>
       <input
         type='range'
         min='0'

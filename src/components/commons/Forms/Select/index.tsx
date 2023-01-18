@@ -1,5 +1,5 @@
 // @ts-nocheck
-
+import Label from '../Label';
 import styles from './styles.module.css';
 import ReactSelect, { components, OptionProps } from 'react-select';
 
@@ -47,22 +47,22 @@ const Select = ({
 }: SelectProps) => {
   return (
     <>
-<div className={styles.selectContainer}>
-<label className={styles.label} id={`select-${label.replace(/\s/g, '')}`}>
-        {label}
-      </label>
-      <ReactSelect
-        aria-labelledby={`select-${label.replace(/\s/g, '')}`}
-        options={options}
-        className={styles.select}
-        defaultValue={options[0]}
-        components={type === 'color' ? { Option: ColorOption } : {}}
-        value={value ? options.find((option) => option.value === value) : null}
-        onChange={(option: { value: string; label: string }) =>
-          onChange(option?.value || '')
-        }
-      />
-</div>
+      <div className={styles.selectContainer}>
+        <Label id={`select-${label.replace(/\s/g, '')}`}>{label}</Label>
+        <ReactSelect
+          aria-labelledby={`select-${label.replace(/\s/g, '')}`}
+          options={options}
+          className={styles.select}
+          defaultValue={options[0]}
+          components={type === 'color' ? { Option: ColorOption } : {}}
+          value={
+            value ? options.find((option) => option.value === value) : null
+          }
+          onChange={(option: { value: string; label: string }) =>
+            onChange(option?.value || '')
+          }
+        />
+      </div>
     </>
   );
 };

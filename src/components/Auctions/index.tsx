@@ -4,7 +4,7 @@ import Search from './components/Search';
 import Auction from './components/Auction';
 import Button from '@/components/commons/Button';
 import Divider from '../commons/Divider';
-import { LoadingIcon } from '@/components/commons/Icons';
+import { LoadingIcon, CloseIcon } from '@/components/commons/Icons';
 import Filters from './components/Filters';
 import ExtraFilters from './components/ExtraFilters';
 
@@ -109,6 +109,9 @@ const Auctions = forwardRef(({ auctions }: AuctionsProps, ref: any) => {
               variant='text'
               className={styles.reset}
               onClick={() => setFilters({ type: 'reset' })}>
+              <span className={styles.icon}>
+                <CloseIcon />
+              </span>
               Reset Filters
             </Button>
           </aside>

@@ -1,0 +1,9 @@
+.label {
+  font-family: 'Poppins';
+  color: var(--neutrals-5);
+  font-size: 0.75rem;
+  font-weight: 700;
+  line-height: 1;
+  text-transform: uppercase;
+  margin-bottom: 0.75rem;
+}

@@ -1,6 +1,5 @@
 .option {
   display: flex;
-
   align-items: center;
 }
 
@@ -9,4 +8,8 @@
   height: 1.25rem;
   border-radius: 50%;
   display: inline;
+}
+.selectContainer{
+  display: flex;
+  flex-direction: column;
 }
