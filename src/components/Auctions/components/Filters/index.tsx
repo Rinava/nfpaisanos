@@ -3,6 +3,7 @@ import { useContext } from 'react';
 import { AuctionsContext } from '../..';
 import { Select } from '@/components/commons/Forms';
 import clsx from 'clsx';
+import Pills from '@/components/commons/Forms/Pills';
 
 interface FiltersProps {
   className?: string;
@@ -28,7 +29,15 @@ const Filters = ({ className }: FiltersProps) => {
         onChange={(value) => setFilters({ type: 'sortBy', payload: value })}
         value={filters.sortBy}
       />
-      <div style={{ color: 'white' }}>SOY UN FILTRO HOLA</div>
+      <Pills
+        options={[
+          { value: 'all', label: 'All items' },
+          { value: 'art', label: 'Art' },
+          { value: 'photography', label: 'Photography' }
+        ]}
+        selected={filters.attributes.type}
+        onChange={(value) => setFilters({ type: 'rarity', payload: value })}
+      />
     </div>
   );
 };
