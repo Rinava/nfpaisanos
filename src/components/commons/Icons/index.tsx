@@ -4,4 +4,10 @@ import CandleSticksIcon from './CandleSticksIcon';
 import LoadingIcon from './LoadingIcon';
 import ArrowIcon from './ArrowIcon';
 
-export { LogoIcon, BurgerIcon, CandleSticksIcon, LoadingIcon, ArrowIcon };
+export {
+  LogoIcon,
+  BurgerIcon,
+  CandleSticksIcon,
+  LoadingIcon,
+  ArrowIcon,
+};
