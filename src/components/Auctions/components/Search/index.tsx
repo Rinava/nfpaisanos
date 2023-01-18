@@ -1,19 +1,15 @@
-import { useState } from 'react';
-import Input from '@/components/commons/Forms/Input';
+import { useContext } from 'react';
+import { AuctionsContext } from '../..';
+import { Input } from '@/components/commons/Forms';
 
 const Search = () => {
-  const [search, setSearch] = useState<string>('');
-
-  const handleSearch = (value: string) => {
-    setSearch(value);
-    console.log(search);
-  };
+  const { setFilters, filters } = useContext(AuctionsContext);
 
   return (
     <Input
       placeholder='Type your keywords'
-      value={search}
-      onChange={handleSearch}
+      onChange={(value) => setFilters({ type: 'search', payload: value })}
+      value={filters.search}
     />
   );
 };

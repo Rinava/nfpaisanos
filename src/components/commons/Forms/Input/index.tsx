@@ -1,16 +1,19 @@
+import styles from './styles.module.css';
+
 interface InputProps {
   placeholder: string;
-  value: string;
   onChange: (value: string) => void;
+  value?: string;
 }
 
-const Input = (props: InputProps) => {
+const Input = ({ placeholder, onChange, value }: InputProps) => {
   return (
     <input
       type='text'
-      placeholder={props.placeholder}
-      value={props.value}
-      onChange={(e) => props.onChange(e.target.value)}
+      placeholder={placeholder}
+      onChange={(e) => onChange(e.target.value)}
+      value={value}
+      className={styles.input}
     />
   );
 };

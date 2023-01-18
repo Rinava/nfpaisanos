@@ -16,22 +16,22 @@ const variations = {
   text: styles.text,
 };
 
-const Button = (props: ButtonProps) => {
-  const {
-    children,
-    onClick,
-    type = 'submit',
-    disabled,
-    variant = 'secondary',
-    className,
-  } = props;
-
+const Button = ({
+  children,
+  onClick,
+  type = 'submit',
+  disabled,
+  variant = 'secondary',
+  className,
+  ...props
+}: ButtonProps) => {
   return (
     <button
       className={clsx(styles.button, variations[variant], className)}
       onClick={onClick}
       type={type}
-      disabled={disabled}>
+      disabled={disabled}
+      {...props}>
       {children}
     </button>
   );

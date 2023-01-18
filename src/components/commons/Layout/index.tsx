@@ -28,7 +28,7 @@ const Layout = ({ children }: Props) => {
 
   useEffect(() => {
     const getCurrencyValues = async () => {
-      const response = await fetch('http://localhost:3000/api/currencies');
+      const response = await fetch('/api/currencies');
       const data = await response.json();
 
       setCurrencyValues(data);

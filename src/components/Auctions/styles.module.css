@@ -1,8 +1,10 @@
 .auctions {
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin-top: 2rem;
+  padding-top: 2rem;
 }
-.icon{
-    margin-right: 0.75rem;
+.icon {
+  margin-right: 0.75rem;
 }
