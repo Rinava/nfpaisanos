@@ -47,7 +47,8 @@ const Select = ({
 }: SelectProps) => {
   return (
     <>
-      <label className={styles.label} id={`select-${label.replace(/\s/g, '')}`}>
+<div className={styles.selectContainer}>
+<label className={styles.label} id={`select-${label.replace(/\s/g, '')}`}>
         {label}
       </label>
       <ReactSelect
@@ -61,6 +62,7 @@ const Select = ({
           onChange(option?.value || '')
         }
       />
+</div>
     </>
   );
 };

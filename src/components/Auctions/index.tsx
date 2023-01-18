@@ -3,6 +3,7 @@ import { createContext, forwardRef, useMemo, useReducer } from 'react';
 import Search from './components/Search';
 import Auction from './components/Auction';
 import Button from '@/components/commons/Button';
+import Divider from '../commons/Divider';
 import { LoadingIcon } from '@/components/commons/Icons';
 import Filters from './components/Filters';
 import ExtraFilters from './components/ExtraFilters';
@@ -97,23 +98,33 @@ const Auctions = forwardRef(({ auctions }: AuctionsProps, ref: any) => {
 
   return (
     <AuctionsContext.Provider value={{ setFilters, filters }}>
-      <div className={styles.auctions} ref={ref}>
-        <Search />
-        <Filters />
-        <ExtraFilters />
-        <Button onClick={() => setFilters({ type: 'reset' })}>
-          Reset Filters
-        </Button>
-        {filteredAuctions.map((auction) => (
-          <Auction key={auction.id} auction={auction} />
-        ))}
+      <section className={styles.section} ref={ref}>
+        <Search className={styles.search} />
+        <Filters className={styles.filters} />
+        <div className={styles.container}>
+          <aside className={styles.sidebar}>
+            <ExtraFilters />
+            <Divider />
+            <Button
+              variant='text'
+              className={styles.reset}
+              onClick={() => setFilters({ type: 'reset' })}>
+              Reset Filters
+            </Button>
+          </aside>
+          <div className={styles.auctions}>
+            {filteredAuctions.map((auction) => (
+              <Auction key={auction.id} auction={auction} />
+            ))}
+          </div>
+        </div>
         <Button onClick={() => {}}>
           <span className={styles.icon}>
             <LoadingIcon />
           </span>
           Load more
         </Button>
-      </div>
+      </section>
     </AuctionsContext.Provider>
   );
 });

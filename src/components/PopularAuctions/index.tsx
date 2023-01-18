@@ -22,30 +22,31 @@ const PopularAuctions = ({ auctions }: PopularAuctionsProps) => {
 
   return (
     <section className={styles.popular_auctions}>
-      <PopularAuction auction={auctions[currentIndex]} />
-      <div className={styles.controls}>
-        <Button
-          variant='text'
-          className={clsx(
-            styles.control,
-            currentIndex === 0 && styles.disabled
-          )}
-          onClick={handlePrevious}
-          aria-label='Previous'
-          disabled={currentIndex === 0}>
-          <ArrowIcon direction='scale(-1,1)' />
-        </Button>
-        <Button
-          className={clsx(
-            styles.control,
-            currentIndex === auctions.length - 1 && styles.disabled
-          )}
-          onClick={handleNext}
-          disabled={currentIndex === auctions.length - 1}
-          aria-label='Next'>
-          <ArrowIcon />
-        </Button>
-      </div>
+      <PopularAuction auction={auctions[currentIndex]}>
+        <div className={styles.controls}>
+          <Button
+            variant='text'
+            className={clsx(
+              styles.control,
+              currentIndex === 0 && styles.disabled
+            )}
+            onClick={handlePrevious}
+            aria-label='Previous'
+            disabled={currentIndex === 0}>
+            <ArrowIcon direction='scale(-1,1)' />
+          </Button>
+          <Button
+            className={clsx(
+              styles.control,
+              currentIndex === auctions.length - 1 && styles.disabled
+            )}
+            onClick={handleNext}
+            disabled={currentIndex === auctions.length - 1}
+            aria-label='Next'>
+            <ArrowIcon />
+          </Button>
+        </div>
+      </PopularAuction>
     </section>
   );
 };
