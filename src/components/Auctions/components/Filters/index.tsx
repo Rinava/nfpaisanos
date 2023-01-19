@@ -19,12 +19,12 @@ const Filters = ({ className }: FiltersProps) => {
         options={[
           { value: 'newest', label: 'Newest' },
           { value: 'oldest', label: 'Oldest' },
-          { value: 'most-liked', label: 'Most Liked' },
-          { value: 'least-liked', label: 'Least Liked' },
-          { value: 'highest-bid', label: 'Highest Bid' },
-          { value: 'lowest-bid', label: 'Lowest Bid' },
-          { value: 'highest-price', label: 'Highest Price' },
-          { value: 'lowest-price', label: 'Lowest Price' },
+          { value: 'mostLiked', label: 'Most Liked' },
+          { value: 'leastLiked', label: 'Least Liked' },
+          { value: 'highestBid', label: 'Highest Bid' },
+          { value: 'lowestBid', label: 'Lowest Bid' },
+          { value: 'highestPrice', label: 'Highest Price' },
+          { value: 'lowestPrice', label: 'Lowest Price' },
         ]}
         onChange={(value) => setFilters({ type: 'sortBy', payload: value })}
         value={filters.sortBy}

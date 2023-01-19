@@ -7,6 +7,7 @@ import Divider from '../commons/Divider';
 import { LoadingIcon, CloseIcon } from '@/components/commons/Icons';
 import Filters from './components/Filters';
 import ExtraFilters from './components/ExtraFilters';
+import sortBy from '@/utils/sortAuctionBy';
 
 interface AuctionsContextProps {
   setFilters: (filters: any) => void;
@@ -129,6 +130,8 @@ const Auctions = forwardRef(({ auctions }: AuctionsProps, ref: any) => {
     if (filters.type !== 'all') {
       auc = auc.filter((auction) => auction.type === filters.type);
     }
+
+    auc = sortBy(auc, filters.sortBy);
 
     return auc;
   }, [auctions, filters]);
