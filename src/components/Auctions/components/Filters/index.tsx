@@ -32,11 +32,11 @@ const Filters = ({ className }: FiltersProps) => {
       <Pills
         options={[
           { value: 'all', label: 'All items' },
-          { value: 'art', label: 'Art' },
-          { value: 'photography', label: 'Photography' }
+          { value: 'Art', label: 'Art' },
+          { value: 'Photography', label: 'Photography' },
         ]}
-        selected={filters.attributes.type}
-        onChange={(value) => setFilters({ type: 'rarity', payload: value })}
+        selected={filters.type}
+        onChange={(value) => setFilters({ type: 'type', payload: value })}
       />
     </div>
   );

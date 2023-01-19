@@ -12,7 +12,7 @@ interface RangeProps {
 
 const Range = (props: RangeProps) => {
   const { value, min, max, step, onChange } = props;
-  const [percentage, setPercentage] = useState(0);
+  const [percentage, setPercentage] = useState(100);
   const [isFocused, setIsFocused] = useState(false);
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const value = Number(e.target.value);
@@ -20,8 +20,6 @@ const Range = (props: RangeProps) => {
     setPercentage(percentage);
     onChange(value);
   };
-
-  console.log('percentage', percentage);
 
   return (
     <div className={styles.slider_container}>

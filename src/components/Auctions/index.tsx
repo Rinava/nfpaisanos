@@ -53,6 +53,11 @@ const Auctions = forwardRef(({ auctions }: AuctionsProps, ref: any) => {
             ...state,
             sortBy: action.payload,
           };
+        case 'type':
+          return {
+            ...state,
+            type: action.payload,
+          };
         case 'price':
           return {
             ...state,
@@ -82,6 +87,7 @@ const Auctions = forwardRef(({ auctions }: AuctionsProps, ref: any) => {
               type: 'all',
               color: 'all',
             },
+            type: 'all',
           };
 
         default:
@@ -92,6 +98,7 @@ const Auctions = forwardRef(({ auctions }: AuctionsProps, ref: any) => {
       search: '',
       sortBy: 'newest',
       price: minAndMaxPrice.max,
+      type: 'all',
       attributes: {
         type: 'all',
         color: 'all',
@@ -107,6 +114,9 @@ const Auctions = forwardRef(({ auctions }: AuctionsProps, ref: any) => {
         auction.author.toLowerCase().includes(filters.search.toLowerCase())
       );
     }
+    auc = auc.filter(
+      (auction) => parseFloat(auction.instantPrice) <= filters.price
+    );
 
     for (const key in filters.attributes) {
       if (filters.attributes[key] !== 'all') {
@@ -114,6 +124,10 @@ const Auctions = forwardRef(({ auctions }: AuctionsProps, ref: any) => {
           (auction) => auction.attributes[key] === filters.attributes[key]
         );
       }
+    }
+
+    if (filters.type !== 'all') {
+      auc = auc.filter((auction) => auction.type === filters.type);
     }
 
     return auc;
