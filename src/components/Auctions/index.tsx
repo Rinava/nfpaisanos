@@ -155,18 +155,27 @@ const Auctions = forwardRef(({ auctions }: AuctionsProps, ref: any) => {
               Reset Filters
             </Button>
           </aside>
-          <div className={styles.auctions}>
-            {filteredAuctions.map((auction) => (
-              <Auction key={auction.id} auction={auction} />
-            ))}
+          <div className={styles.auctions_container}>
+            <div className={styles.auctions}>
+              {filteredAuctions.map((auction) => (
+                <Auction key={auction.id} auction={auction} />
+              ))}
+            </div>
+            {filteredAuctions.length === 0 ? (
+              <div className={styles.no_auctions}>
+                <h3>No auctions found that match your filters</h3>
+                <p>Try to search for something else</p>
+              </div>
+            ) : (
+              <Button onClick={() => {}} className={styles.load_more}>
+                <span className={styles.icon}>
+                  <LoadingIcon />
+                </span>
+                Load more
+              </Button>
+            )}
           </div>
         </div>
-        <Button onClick={() => {}}>
-          <span className={styles.icon}>
-            <LoadingIcon />
-          </span>
-          Load more
-        </Button>
       </section>
     </AuctionsContext.Provider>
   );

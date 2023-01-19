@@ -31,6 +31,27 @@
   margin-right: auto;
 }
 
+.auctions_container {
+  width: 100%;
+}
+
+.load_more {
+  margin: 2rem auto 0;
+}
+
+.no_auctions {
+  margin: 2rem auto 0;
+  text-align: center;
+  color: var(--neutrals-8);
+  padding: 0 3rem;
+  font-family: 'poppins';
+}
+
+.no_auctions h3 {
+  margin-bottom: 1rem;
+  font-size: 2rem;
+}
+
 @media (min-width: 768px) {
   .auctions {
     grid-template-columns: repeat(1, 1fr);
