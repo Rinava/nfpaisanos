@@ -23,6 +23,23 @@ interface AuctionsProps {
 }
 
 const Auctions = forwardRef(({ auctions }: AuctionsProps, ref: any) => {
+  const minAndMaxPrice = useMemo(() => {
+    return auctions.reduce(
+      (minAndMax, auction) => {
+        const price = parseFloat(auction.instantPrice);
+
+        if (price < minAndMax.min) {
+          minAndMax.min = price;
+        }
+        if (price > minAndMax.max) {
+          minAndMax.max = price;
+        }
+        return minAndMax;
+      },
+      { min: Infinity, max: 0 }
+    );
+  }, [auctions]);
+
   const [filters, setFilters] = useReducer(
     (state: any, action: any) => {
       switch (action.type) {
@@ -35,6 +52,11 @@ const Auctions = forwardRef(({ auctions }: AuctionsProps, ref: any) => {
           return {
             ...state,
             sortBy: action.payload,
+          };
+        case 'price':
+          return {
+            ...state,
+            price: action.payload,
           };
         case 'rarity':
           return {
@@ -69,6 +91,7 @@ const Auctions = forwardRef(({ auctions }: AuctionsProps, ref: any) => {
     {
       search: '',
       sortBy: 'newest',
+      price: minAndMaxPrice.max,
       attributes: {
         type: 'all',
         color: 'all',
@@ -103,7 +126,7 @@ const Auctions = forwardRef(({ auctions }: AuctionsProps, ref: any) => {
         <Filters className={styles.filters} />
         <div className={styles.container}>
           <aside className={styles.sidebar}>
-            <ExtraFilters />
+            <ExtraFilters minAndMaxPrice={minAndMaxPrice} />
             <Divider />
             <Button
               variant='text'

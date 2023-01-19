@@ -4,14 +4,25 @@ import { AuctionsContext } from '../..';
 import { Select, Range } from '@/components/commons/Forms';
 import Divider from '@/components/commons/Divider';
 
-interface ExtraFiltersProp {}
+interface ExtraFiltersProp {
+  minAndMaxPrice: {
+    min: number;
+    max: number;
+  };
+}
 
-const ExtraFilters = (props: ExtraFiltersProp) => {
+const ExtraFilters = ({ minAndMaxPrice }: ExtraFiltersProp) => {
   const { setFilters, filters } = useContext(AuctionsContext);
 
   return (
     <div className={styles.extraFilters}>
-      <Range />
+      <Range
+        min={minAndMaxPrice.min}
+        max={minAndMaxPrice.max}
+        step={(minAndMaxPrice.max - minAndMaxPrice.min) / 100}
+        value={filters.price}
+        onChange={(value) => setFilters({ type: 'price', payload: value })}
+      />
       <Divider />
       <Select
         label='Rarity'
