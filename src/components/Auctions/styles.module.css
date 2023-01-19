@@ -23,8 +23,14 @@
   width: 100%;
 }
 
-.icon {
+.loading_icon {
   margin-right: 0.75rem;
+  line-height: 0;
+}
+
+.close_icon{
+  margin-right: 0.5rem;
+  line-height: 0;
 }
 
 .reset {
@@ -37,6 +43,9 @@
 
 .load_more {
   margin: 2rem auto 0;
+  padding: 0.5rem 0.875rem;
+  font-size: 0.875rem;
+  width: 100%;
 }
 
 .no_auctions {
@@ -67,6 +76,11 @@
   .filters {
     flex-direction: row;
     justify-content: space-between;
+  }
+
+  .load_more {
+ 
+    width: auto;
   }
 }
 

@@ -150,7 +150,7 @@ const Auctions = forwardRef(({ auctions }: AuctionsProps, ref: any) => {
               variant='text'
               className={styles.reset}
               onClick={() => setFilters({ type: 'reset' })}>
-              <span className={styles.icon}>
+              <span className={styles.close_icon}>
                 <CloseIcon />
               </span>
               Reset Filters
@@ -169,7 +169,7 @@ const Auctions = forwardRef(({ auctions }: AuctionsProps, ref: any) => {
               </div>
             ) : (
               <Button onClick={() => {}} className={styles.load_more}>
-                <span className={styles.icon}>
+                <span className={styles.loading_icon}>
                   <LoadingIcon />
                 </span>
                 Load more
