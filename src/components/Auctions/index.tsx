@@ -84,11 +84,12 @@ const Auctions = forwardRef(({ auctions }: AuctionsProps, ref: any) => {
           return {
             search: '',
             sortBy: 'newest',
+            price: minAndMaxPrice.max,
+            type: 'all',
             attributes: {
               type: 'all',
               color: 'all',
             },
-            type: 'all',
           };
 
         default:

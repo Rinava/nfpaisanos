@@ -21,6 +21,7 @@ const ExtraFilters = ({ minAndMaxPrice }: ExtraFiltersProp) => {
         max={minAndMaxPrice.max}
         step={(minAndMaxPrice.max - minAndMaxPrice.min) / 100}
         value={filters.price}
+        label='Price range'
         onChange={(value) => setFilters({ type: 'price', payload: value })}
       />
       <Divider />
