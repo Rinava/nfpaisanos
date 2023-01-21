@@ -140,7 +140,7 @@ const Auctions = forwardRef(({ auctions }: AuctionsProps, ref: any) => {
   return (
     <AuctionsContext.Provider value={{ setFilters, filters }}>
       <section className={styles.section} ref={ref}>
-        <Search className={styles.search} />
+        <Search />
         <Filters className={styles.filters} />
         <div className={styles.container}>
           <aside className={styles.sidebar}>

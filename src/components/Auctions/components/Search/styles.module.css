@@ -1,29 +1,10 @@
 .search {
-  background-color: transparent;
-  font-family: 'Poppins';
-  font-style: normal;
-  font-weight: 500;
-  font-size: 0.875rem;
-  line-height: 1.71;
-  color: var(--neutrals-8);
-  border: 2px solid var(--neutrals-3);
-  border-radius: 0.75rem;
-  padding: 0.875rem 1rem;
   margin-bottom: 1.5rem;
   background: url('/search.svg') no-repeat right;
   background-position: right 0.75rem center;
   background-size: 1.5rem;
 }
 
-.search::placeholder {
-  font-weight: 500;
-  font-size: 0.875rem;
-  line-height: 1.71;
-  color: var(--neutrals-8);
-}
-.search:focus::placeholder {
-  opacity: 0.5;
-}
 
 @media (min-width: 768px) {
   .search {
@@ -36,6 +17,7 @@
     border-radius: 0;
     border-bottom: 2px solid var(--neutrals-3);
   }
+  
   .search::placeholder {
     font-weight: 400;
     font-size: 1.5rem;

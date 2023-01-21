@@ -2,6 +2,7 @@ import styles from './styles.module.css';
 import Image from 'next/image';
 import Button from '@/components/commons/Button';
 import { CandleSticksIcon } from '@/components/commons/Icons';
+import BidIcon from '@/components/commons/Icons/BidIcon';
 
 interface AuctionProps {
   auction: any;
@@ -10,13 +11,24 @@ interface AuctionProps {
 const Auction = ({ auction }: AuctionProps) => {
   return (
     <div className={styles.auction}>
-      <Image
-        src={auction.media.image}
-        alt=''
-        width={300}
-        height={300}
-        className={styles.image}
-      />
+      <div className={styles.image_container}>
+        <Button
+          variant='primary'
+          onClick={() => {}}
+          className={styles.bid_button}>
+          Place a Bid
+          <span className={styles.bid_icon}>
+            <BidIcon />
+          </span>
+        </Button>
+        <Image
+          src={auction.media.image}
+          alt=''
+          width={300}
+          height={300}
+          className={styles.image}
+        />
+      </div>
       <div className={styles.content}>
         <div className={styles.heading}>
           <h3 className={styles.title}>Amazing digital art</h3>
@@ -37,7 +49,7 @@ const Auction = ({ auction }: AuctionProps) => {
           </div>
           <p className={styles.stock}>{auction.stock} in stock</p>
         </div>
-        <div className={styles.actions}>
+        <div className={styles.extra_info}>
           <CandleSticksIcon />
           <p className={styles.bid}>
             Highest bid

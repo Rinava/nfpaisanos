@@ -19,7 +19,7 @@ const ColorOption = ({ ...props }: OptionProps) => {
   return (
     <div className={styles.option}>
       <div
-        className={styles.option_icon}
+        className={styles.option_icon_color}
         style={{ backgroundColor: colors[props.data.value as colors] }}
       />
       <components.Option {...props} />
@@ -46,24 +46,20 @@ const Select = ({
   type = 'default',
 }: SelectProps) => {
   return (
-    <>
-      <div className={styles.selectContainer}>
-        <Label id={`select-${label.replace(/\s/g, '')}`}>{label}</Label>
-        <ReactSelect
-          aria-labelledby={`select-${label.replace(/\s/g, '')}`}
-          options={options}
-          className={styles.select}
-          defaultValue={options[0]}
-          components={type === 'color' ? { Option: ColorOption } : {}}
-          value={
-            value ? options.find((option) => option.value === value) : null
-          }
-          onChange={(option: { value: string; label: string }) =>
-            onChange(option?.value || '')
-          }
-        />
-      </div>
-    </>
+    <div className={styles.select_container}>
+      <Label id={`select-${label.replace(/\s/g, '')}`}>{label}</Label>
+      <ReactSelect
+        aria-labelledby={`select-${label.replace(/\s/g, '')}`}
+        options={options}
+        className={styles.select}
+        defaultValue={options[0]}
+        components={type === 'color' ? { Option: ColorOption } : {}}
+        value={value ? options.find((option) => option.value === value) : null}
+        onChange={(option: { value: string; label: string }) =>
+          onChange(option?.value)
+        }
+      />
+    </div>
   );
 };
 

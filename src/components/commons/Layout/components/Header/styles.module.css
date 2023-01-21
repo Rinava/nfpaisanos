@@ -2,11 +2,24 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 3rem 2.3rem 1.5rem 2rem;
-} 
+  padding: 3rem 2rem 1.5rem 2rem;
+  width: 100%;
+}
 
 .menu {
   line-height: 0;
   background-color: transparent;
   border: none;
+}
+
+@media screen and (min-width: 768px) {
+  .container {
+    border-bottom: 1px var(--neutrals-3) solid;
+  }
+
+  .header {
+    max-width: 1200px;
+    padding: 3rem 2.5rem 2.3rem;
+    margin: 0 auto;
+  }
 }

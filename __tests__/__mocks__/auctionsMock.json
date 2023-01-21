@@ -1,0 +1,31 @@
+[
+  {
+    "id": 1,
+    "instantPrice": "10 ETH",
+    "highestBid": "10 ETH",
+    "author": "antonio",
+    "authorAvatar": "https://avatars.githubusercontent.com/u/60411784?v=4",
+    "type": "Photography",
+    "stock": 2,
+    "createdAt": "2021-01-01T00:00:00.000Z",
+    "endsAt": "2022-01-01T00:00:00.000Z",
+    "likes": 10,
+    "media": {
+      "id": 1,
+      "image": "",
+      "image2x": ""
+    },
+    "attributes": {
+      "id": 1,
+      "type": "uncommon",
+      "color": "blue"
+    },
+    "bidUsers": [
+      {
+        "id": 1,
+        "name": "lucas",
+        "avatar": "https://avatars.githubusercontent.com/u/60411784?v=4"
+      }
+    ]
+  }
+]

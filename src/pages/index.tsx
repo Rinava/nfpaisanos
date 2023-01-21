@@ -1,3 +1,4 @@
+import styles from './styles.module.css';
 import { useRef } from 'react';
 import { getPopularAuctions, getAuctions } from '@/lib/api';
 import PopularAuctions from '@/components/PopularAuctions';
@@ -18,7 +19,10 @@ export default function Home({ popularAuctions, auctions }: Props) {
 
   return (
     <>
-      <Headline callToAction={handleScrollToAuctions} />
+      <Headline
+        callToAction={handleScrollToAuctions}
+        className={styles.headline}
+      />
       <PopularAuctions auctions={popularAuctions} />
       <Auctions auctions={auctions} ref={auctionsRef} />
     </>

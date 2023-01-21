@@ -1,13 +1,15 @@
 import styles from './styles.module.css';
 import Button from '../commons/Button';
+import clsx from 'clsx';
 
 interface HeadlineProps {
   callToAction: () => void;
+  className?: string;
 }
 
-const Headline = ({ callToAction }: HeadlineProps) => {
+const Headline = ({ callToAction, className }: HeadlineProps) => {
   return (
-    <section className={styles.headline}>
+    <section className={clsx(styles.headline, className)}>
       <h1 className={styles.slogan}>The new creative economy.</h1>
       <h2 className={styles.description}>
         Create, explore, & SELL digital art NFTs.

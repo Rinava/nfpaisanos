@@ -55,7 +55,7 @@
   border-bottom: 1px var(--neutrals-3) solid;
 }
 
-.actions {
+.extra_info {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -84,4 +84,25 @@
   font-weight: 600;
   color: var(--neutrals-6);
   line-height: 1.67;
+}
+
+.image_container {
+  position: relative;
+}
+
+.bid_button {
+  position: absolute;
+  bottom: 1rem;
+  left: 50%;
+  transform: translateX(-50%);
+  display: none;
+}
+
+.bid_icon {
+  margin-left: 0.75rem;
+}
+
+.image_container:hover .type,
+.image_container:hover .bid_button {
+  display: block;
 }
