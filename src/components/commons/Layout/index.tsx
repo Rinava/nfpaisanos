@@ -1,5 +1,6 @@
 import { createContext, useEffect, useState } from 'react';
 import styles from './styles.module.css';
+import Head from 'next/head';
 import Header from './components/Header';
 import Footer from './components/Footer';
 
@@ -38,6 +39,13 @@ const Layout = ({ children }: Props) => {
 
   return (
     <LayoutContext.Provider value={{ currencies: currencyValues }}>
+      <Head>
+        <title>NFPaisanos</title>
+        <meta
+          name='description'
+          content='NFPaisanos, an NFT marketplace for the NFT community'
+        />
+      </Head>
       <div className={styles.container}>
         <Header />
         <main className={styles.main}>{children}</main>

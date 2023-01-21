@@ -22,6 +22,7 @@ const PopularAuction = ({ auction, children }: PopularAuctionProps) => {
           width={311}
           height={478}
           className={styles.image}
+          priority
         />
       </div>
       <div className={styles.info}>

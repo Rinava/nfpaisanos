@@ -1,12 +1,7 @@
 import styles from './styles.module.css';
-import clsx from 'clsx';
 import { useContext } from 'react';
 import { AuctionsContext } from '../..';
 import { Select, Pills } from '@/components/commons/Forms';
-
-interface FiltersProps {
-  className?: string;
-}
 
 const filterItems = [
   { value: 'newest', label: 'Newest' },
@@ -25,11 +20,11 @@ const typeItems = [
   { value: 'Photography', label: 'Photography' },
 ];
 
-const Filters = ({ className }: FiltersProps) => {
+const Filters = () => {
   const { setFilters, filters } = useContext(AuctionsContext);
 
   return (
-    <div className={clsx(styles.filters, className)}>
+    <div className={styles.filters}>
       <Select
         options={filterItems}
         onChange={(value) => setFilters({ type: 'sortBy', payload: value })}

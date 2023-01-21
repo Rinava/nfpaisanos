@@ -149,7 +149,7 @@ const Auctions = forwardRef(
       <AuctionsContext.Provider value={{ setFilters, filters }}>
         <section className={clsx(styles.section, className)} ref={ref}>
           <Search />
-          <Filters className={styles.filters} />
+          <Filters />
           <div className={styles.container}>
             <aside className={styles.sidebar}>
               <ExtraFilters minAndMaxPrice={minAndMaxPrice} />
