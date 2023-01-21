@@ -1,5 +1,5 @@
-import { LogoIcon } from '../../../Icons';
 import styles from './styles.module.css';
+import { LogoIcon } from '@/components/commons/Icons';
 
 const Logo = () => (
   <span className={styles.logo}>

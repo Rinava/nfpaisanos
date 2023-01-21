@@ -1,15 +1,17 @@
-import LogoIcon from './LogoIcon';
+import ArrowIcon from './ArrowIcon';
+import BidIcon from './BidIcon';
 import BurgerIcon from './BurgerIcon';
 import CandleSticksIcon from './CandleSticksIcon';
-import LoadingIcon from './LoadingIcon';
-import ArrowIcon from './ArrowIcon';
 import CloseIcon from './CloseIcon';
+import LoadingIcon from './LoadingIcon';
+import LogoIcon from './LogoIcon';
 
 export {
-  LogoIcon,
+  ArrowIcon,
+  BidIcon,
   BurgerIcon,
   CandleSticksIcon,
-  LoadingIcon,
-  ArrowIcon,
   CloseIcon,
+  LoadingIcon,
+  LogoIcon,
 };

@@ -1,5 +1,5 @@
 import styles from './styles.module.css';
-import Button from '../commons/Button';
+import Button from '@/components/commons/Button';
 import clsx from 'clsx';
 
 interface HeadlineProps {

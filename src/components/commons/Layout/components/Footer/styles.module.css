@@ -14,8 +14,6 @@
   flex-direction: column;
   gap: 2rem;
   margin-bottom: 3rem;
-
-
 }
 
 .slogan {
@@ -35,15 +33,13 @@
   padding: 1.5rem 0 0;
   /* Divider */
   border-top: 1px solid var(--neutrals-3);
-
   max-width: 1120px;
-  
 }
 
 @media screen and (min-width: 768px) {
   .footer {
     align-items: center;
-    padding: 5rem 2.5rem 2rem ;
+    padding: 5rem 2.5rem 2rem;
     background-color: var(--neutrals-1);
     border-top: 1px solid var(--neutrals-3);
     margin-top: 6.75rem;
@@ -51,13 +47,12 @@
 
   .logo_container {
     max-width: unset;
-   align-items: center;
-   gap: 1.25rem;
+    align-items: center;
+    gap: 1.25rem;
   }
 
   .slogan {
     font-size: 1.5rem;
     line-height: 1.33333;
   }
-
 }

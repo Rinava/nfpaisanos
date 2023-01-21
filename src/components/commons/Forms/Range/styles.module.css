@@ -3,14 +3,33 @@
   flex-direction: column;
   position: relative;
 }
-.slider_values {
-  display: flex;
-  justify-content: space-between;
+
+.tooltip {
+  display: none;
+  white-space: nowrap;
+  position: absolute;
+  background-color: var(--neutrals-8);
+  border-radius: 0.5rem;
+  padding: 0.25rem 0.5rem;
   font-family: 'Poppins';
-  font-size: 0.875rem;
-  font-weight: 500;
-  line-height: 1.71;
-  color: var(--neutrals-8);
+  font-weight: 600;
+  font-size: 0.75rem;
+  line-height: 1.67;
+  text-transform: uppercase;
+  transform: translateY(-45%) translateX(-50%);
+  left: calc(var(--percentage) + var(--fix-offset));
+}
+
+.tooltip::after {
+  content: '';
+  width: 0.75rem;
+  height: 0.75rem;
+  background-color: var(--neutrals-8);
+  position: absolute;
+  bottom: -0.2rem;
+  left: 50%;
+  transform: translateX(-50%) rotate(45deg);
+  border-radius: 4px;
 }
 
 .slider {
@@ -21,7 +40,6 @@
   -webkit-transition: 0.2s;
   transition: opacity 0.2s;
 }
-
 
 .slider::-webkit-slider-thumb {
   -webkit-appearance: none;
@@ -45,40 +63,20 @@
   border-radius: 1.5rem;
 }
 
-.tooltip {
-  display: none;
-  white-space: nowrap;
-  position: absolute;
-  background-color: var(--neutrals-8);
-  border-radius: 0.5rem;
-  padding: 0.25rem 0.5rem;
-  font-family: 'Poppins';
-  font-weight: 600;
-  font-size: 0.75rem;
-  line-height: 1.67;
-  text-transform: uppercase;
-  transform:  translateY(-45%) translateX(-50%);
-  left: calc(var(--percentage) + var(--fix-offset));
-  
-}
-
-.tooltip::after {
-  content: '';
-  width: 0.75rem;
-  height: 0.75rem;
-  background-color: var(--neutrals-8);
-  position: absolute;
-  bottom: -0.2rem;
-  left: 50%;
-  transform: translateX(-50%) rotate(45deg);
-  border-radius: 4px;
-}
-
 .svg {
   position: absolute;
   transform: translateY(-50%);
   top: 50%;
   width: 100%;
   max-height: 1.25rem;
+}
 
+.slider_values {
+  display: flex;
+  justify-content: space-between;
+  font-family: 'Poppins';
+  font-size: 0.875rem;
+  font-weight: 500;
+  line-height: 1.71;
+  color: var(--neutrals-8);
 }

@@ -1,6 +1,7 @@
 import Input from './Input';
-import Select from './Select';
-import Range from './Range';
 import Label from './Label';
+import Pills from './Pills';
+import Range from './Range';
+import Select from './Select';
 
-export { Input, Select, Range , Label};
+export { Input, Label, Pills, Range, Select };

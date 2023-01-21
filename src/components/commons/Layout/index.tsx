@@ -30,7 +30,6 @@ const Layout = ({ children }: Props) => {
     const getCurrencyValues = async () => {
       const response = await fetch('/api/currencies');
       const data = await response.json();
-
       setCurrencyValues(data);
     };
 

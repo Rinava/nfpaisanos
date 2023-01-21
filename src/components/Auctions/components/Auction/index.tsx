@@ -1,8 +1,7 @@
 import styles from './styles.module.css';
 import Image from 'next/image';
 import Button from '@/components/commons/Button';
-import { CandleSticksIcon } from '@/components/commons/Icons';
-import BidIcon from '@/components/commons/Icons/BidIcon';
+import { CandleSticksIcon, BidIcon } from '@/components/commons/Icons';
 
 interface AuctionProps {
   auction: any;

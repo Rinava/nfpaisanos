@@ -26,11 +26,7 @@ const Range = (props: RangeProps) => {
 
   return (
     <div className={styles.slider_container}>
-      <Label
-        className={styles.label}
-        htmlFor={`range-${label.replace(' ', '_')}`}>
-        {label}
-      </Label>
+      <Label htmlFor={`range-${label.replace(' ', '_')}`}>{label}</Label>
       <span
         className={styles.tooltip}
         style={

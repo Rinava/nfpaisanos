@@ -40,6 +40,14 @@
   color: var(--neutrals-4);
 }
 
+.countdown {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 14.375rem;
+  width: 100%;
+}
+
 .countdown_heading {
   font-family: 'Poppins';
   font-weight: 500;
@@ -47,14 +55,6 @@
   line-height: 1.5rem;
   color: var(--neutrals-8);
   margin-bottom: 0.5rem;
-}
-
-.countdown {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  max-width: 14.375rem;
-  width: 100%;
 }
 
 .countdown_measure {

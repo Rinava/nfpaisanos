@@ -1,13 +1,29 @@
 import styles from './styles.module.css';
+import clsx from 'clsx';
 import { useContext } from 'react';
 import { AuctionsContext } from '../..';
-import { Select } from '@/components/commons/Forms';
-import clsx from 'clsx';
-import Pills from '@/components/commons/Forms/Pills';
+import { Select, Pills } from '@/components/commons/Forms';
 
 interface FiltersProps {
   className?: string;
 }
+
+const filterItems = [
+  { value: 'newest', label: 'Newest' },
+  { value: 'oldest', label: 'Oldest' },
+  { value: 'mostLiked', label: 'Most Liked' },
+  { value: 'leastLiked', label: 'Least Liked' },
+  { value: 'highestBid', label: 'Highest Bid' },
+  { value: 'lowestBid', label: 'Lowest Bid' },
+  { value: 'highestPrice', label: 'Highest Price' },
+  { value: 'lowestPrice', label: 'Lowest Price' },
+];
+
+const typeItems = [
+  { value: 'all', label: 'All items' },
+  { value: 'Art', label: 'Art' },
+  { value: 'Photography', label: 'Photography' },
+];
 
 const Filters = ({ className }: FiltersProps) => {
   const { setFilters, filters } = useContext(AuctionsContext);
@@ -15,28 +31,16 @@ const Filters = ({ className }: FiltersProps) => {
   return (
     <div className={clsx(styles.filters, className)}>
       <Select
-        label='Sort By'
-        options={[
-          { value: 'newest', label: 'Newest' },
-          { value: 'oldest', label: 'Oldest' },
-          { value: 'mostLiked', label: 'Most Liked' },
-          { value: 'leastLiked', label: 'Least Liked' },
-          { value: 'highestBid', label: 'Highest Bid' },
-          { value: 'lowestBid', label: 'Lowest Bid' },
-          { value: 'highestPrice', label: 'Highest Price' },
-          { value: 'lowestPrice', label: 'Lowest Price' },
-        ]}
+        options={filterItems}
         onChange={(value) => setFilters({ type: 'sortBy', payload: value })}
         value={filters.sortBy}
+        className={styles.sort}
       />
       <Pills
-        options={[
-          { value: 'all', label: 'All items' },
-          { value: 'Art', label: 'Art' },
-          { value: 'Photography', label: 'Photography' },
-        ]}
+        options={typeItems}
         selected={filters.type}
         onChange={(value) => setFilters({ type: 'type', payload: value })}
+        className={styles.type}
       />
     </div>
   );

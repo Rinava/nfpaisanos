@@ -17,6 +17,7 @@
     line-height: 1.71;
     color: var(--neutrals-8);
   }
+  
   .input:focus::placeholder {
     opacity: 0.5;
   }

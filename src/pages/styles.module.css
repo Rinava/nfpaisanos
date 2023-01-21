@@ -1,9 +1,17 @@
 .headline {
-    padding: 4rem 0;
+  padding: 4rem 0;
+}
+
+.auctions {
+  margin-top: 6rem;
+}
+
+@media screen and (min-width: 768px) {
+  .headline {
+    padding: 14.75rem 0;
   }
-  
-  @media screen and (min-width: 768px) {
-    .headline {
-      padding: 14.75rem 0;
-    }
+
+  .auctions {
+    margin-top: 12.75rem;
   }
+}

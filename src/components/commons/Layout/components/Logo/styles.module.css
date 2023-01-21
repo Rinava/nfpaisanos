@@ -1,3 +1,11 @@
+.logo {
+  display: flex;
+}
+
+.icon_wrapper {
+  line-height: 0;
+}
+
 .title {
   color: var(--neutrals-7);
   font-size: 1.5rem;
@@ -6,12 +14,4 @@
   letter-spacing: -0.02em;
   font-family: 'Poppins';
   padding-left: 8px;
-}
-
-.logo {
-  display: flex;
-}
-
-.icon_wrapper {
-  line-height: 0;
 }

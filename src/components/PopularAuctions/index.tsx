@@ -25,7 +25,6 @@ const PopularAuctions = ({ auctions }: PopularAuctionsProps) => {
       <PopularAuction auction={auctions[currentIndex]}>
         <div className={styles.controls}>
           <Button
-            variant='text'
             className={clsx(
               styles.control,
               currentIndex === 0 && styles.disabled

@@ -1,16 +1,104 @@
-.option {
+.select_container {
+  display: flex;
+  flex-direction: column;
+}
+
+.control {
+  background: transparent !important;
+  font-family: 'Poppins' !important;
+  line-height: 1.71 !important;
+  font-size: 0.875rem !important;
+  font-family: 'Poppins' !important;
+  border: 2px solid var(--neutrals-3) !important;
+  border-radius: 0.75rem !important;
+  padding: 0.1875rem 1rem !important;
+}
+
+.menu {
+  background: var(--neutrals-2) !important;
+  border-radius: 0.5rem !important;
+  font-size: 0.875rem !important;
+  font-family: 'Poppins' !important;
+}
+
+.value_container {
+  padding-left: 0 !important;
+}
+
+.option_color {
   display: flex;
   align-items: center;
 }
 
+.option {
+  color: var(--neutrals-8) !important;
+  margin: 0.3125rem 0 !important;
+  border-radius: 0.5rem !important;
+  background: transparent !important;
+}
+
+.option_color .option {
+  padding-left: 2.5rem;
+}
+
 .option_icon_color {
+  position: relative;
+  margin-left: 2rem;
+  height: 100%;
+  display: contents;
+}
+
+.option_icon_color::after {
+  position: absolute;
+  content: '';
   width: 1.25rem;
   height: 1.25rem;
   border-radius: 50%;
-  display: inline;
+  background-color: var(--color);
+  left: 1rem;
 }
 
-.select_container{
-  display: flex;
-  flex-direction: column;
+.option_color_all .option_icon_color::after {
+  border: 2px solid var(--primary-1);
+  width: 1rem;
+  height: 1rem;
+}
+
+.option:hover,
+.option:focus {
+  background: var(--neutrals-1) !important;
+}
+
+.menu_list {
+  background: var(--neutrals-2) !important;
+  border: 2px solid var(--neutrals-3) !important;
+  border-radius: 0.5rem !important;
+  padding: 0 0.5rem !important;
+}
+
+.single_value {
+  color: var(--neutrals-8) !important;
+}
+
+.option_color_all .option {
+  color: var(--primary-1) !important;
+}
+
+.indicator_separator {
+  display: none !important;
+}
+
+.option_selected {
+  background: var(--neutrals-1) !important;
+}
+
+.dropdown_indicator {
+  border: 2px solid var(--neutrals-3) !important;
+  border-radius: 9999px !important;
+  width: 2rem !important;
+  height: 2rem !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  margin-right: -0.5rem !important;
 }

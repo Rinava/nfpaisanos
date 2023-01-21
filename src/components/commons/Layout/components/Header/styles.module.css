@@ -1,3 +1,10 @@
+.container {
+  position: sticky;
+  top: 0;
+  background-color: var(--neutrals-1);
+  z-index: 9999;
+}
+
 .header {
   display: flex;
   justify-content: space-between;
@@ -6,10 +13,32 @@
   width: 100%;
 }
 
+.links {
+  flex: 1;
+  margin-left: 2rem;
+  padding-left: 2rem;
+  border-left: 2px var(--neutrals-3) solid;
+  display: flex;
+  gap: 2rem;
+  display: none;
+}
+
+.link {
+  font-family: 'DM Sans';
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--neutrals-4);
+  text-decoration: none;
+}
+
 .menu {
   line-height: 0;
   background-color: transparent;
   border: none;
+}
+
+.connect_wallet {
+  display: none !important;
 }
 
 @media screen and (min-width: 768px) {
@@ -21,5 +50,19 @@
     max-width: 1200px;
     padding: 3rem 2.5rem 2.3rem;
     margin: 0 auto;
+    padding: 1.25rem 2.5rem;
+    align-self: stretch;
+  }
+
+  .links {
+    display: flex;
+  }
+
+  .menu {
+    display: none;
+  }
+
+  .connect_wallet {
+    display: block !important;
   }
 }

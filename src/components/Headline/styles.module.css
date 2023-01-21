@@ -5,16 +5,6 @@
   justify-content: center;
 }
 
-.description {
-  color: var(--neutrals-4);
-  font-family: 'Poppins';
-  font-size: 0.62rem;
-  font-weight: 700;
-  line-height: 1.2;
-  text-transform: uppercase;
-  order: -1;
-}
-
 .slogan {
   color: var(--neutrals-8);
   font-family: 'DM Sans';
@@ -24,6 +14,16 @@
   letter-spacing: -0.01em;
   text-align: center;
   margin-bottom: 1.5rem;
+}
+
+.description {
+  color: var(--neutrals-4);
+  font-family: 'Poppins';
+  font-size: 0.62rem;
+  font-weight: 700;
+  line-height: 1.2;
+  text-transform: uppercase;
+  order: -1;
 }
 
 @media screen and (min-width: 768px) {

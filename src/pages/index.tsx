@@ -1,8 +1,8 @@
 import styles from './styles.module.css';
 import { useRef } from 'react';
 import { getPopularAuctions, getAuctions } from '@/lib/api';
-import PopularAuctions from '@/components/PopularAuctions';
 import Headline from '@/components/Headline';
+import PopularAuctions from '@/components/PopularAuctions';
 import Auctions from '@/components/Auctions';
 
 interface Props {
@@ -14,7 +14,10 @@ export default function Home({ popularAuctions, auctions }: Props) {
   const auctionsRef = useRef<HTMLDivElement>(null);
 
   const handleScrollToAuctions = () => {
-    auctionsRef?.current?.scrollIntoView({ behavior: 'smooth' });
+    window.scrollTo({
+      top: (auctionsRef?.current?.offsetTop || 0) - 100,
+      behavior: 'smooth',
+    });
   };
 
   return (
@@ -24,7 +27,11 @@ export default function Home({ popularAuctions, auctions }: Props) {
         className={styles.headline}
       />
       <PopularAuctions auctions={popularAuctions} />
-      <Auctions auctions={auctions} ref={auctionsRef} />
+      <Auctions
+        auctions={auctions}
+        ref={auctionsRef}
+        className={styles.auctions}
+      />
     </>
   );
 }

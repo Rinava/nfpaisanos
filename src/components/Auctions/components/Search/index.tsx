@@ -1,7 +1,7 @@
+import styles from './styles.module.css';
 import { useContext } from 'react';
 import { AuctionsContext } from '../..';
 import { Input } from '@/components/commons/Forms';
-import styles from './styles.module.css';
 
 const Search = () => {
   const { setFilters, filters } = useContext(AuctionsContext);
@@ -9,7 +9,7 @@ const Search = () => {
   return (
     <Input
       className={styles.search}
-      placeholder='Type your keywords'
+      placeholder='Type to find something nice...'
       onChange={(value) => setFilters({ type: 'search', payload: value })}
       value={filters.search}
     />

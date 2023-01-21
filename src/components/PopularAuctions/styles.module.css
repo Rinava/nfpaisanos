@@ -19,14 +19,12 @@
 
 .disabled {
   opacity: 0.5;
-  border: none;
+  border-width: 0;
   pointer-events: none;
 }
-
 
 @media screen and (min-width: 768px) {
   .controls {
     justify-content: flex-start;
   }
-  
 }
