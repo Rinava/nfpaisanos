@@ -24,9 +24,9 @@ export default function Home({ popularAuctions, auctions }: Props) {
   return (
     <>
       <motion.div
-        initial={{ translateY: 100, opacity: 0 }}
-        whileInView={{ translateY: 0, opacity: 1 }}
-        transition={{ type: 'spring', stiffness: 50 }}
+        initial={{ scale: 0, opacity: 0 }}
+        whileInView={{ scale: 1, opacity: 1 }}
+        transition={{ type: 'spring', duration: 0.75 }}
         viewport={{
           once: true,
         }}>
@@ -35,16 +35,7 @@ export default function Home({ popularAuctions, auctions }: Props) {
           className={styles.headline}
         />
       </motion.div>
-      <motion.div
-        initial={{ translateY: 100, opacity: 0 }}
-        whileInView={{ translateY: 0, opacity: 1 }}
-        transition={{ type: 'spring', stiffness: 50, delay: 0.5 }}
-        viewport={{
-          once: true,
-        }}>
-        <PopularAuctions auctions={popularAuctions} />
-      </motion.div>
-
+      <PopularAuctions auctions={popularAuctions} />
       <Auctions
         auctions={auctions}
         ref={auctionsRef}
