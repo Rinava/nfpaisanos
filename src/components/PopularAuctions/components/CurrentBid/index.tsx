@@ -67,7 +67,7 @@ const Countdown = ({ ending }: TimerProps) => {
     return () => {
       clearTimeout(timeout);
     };
-  }, []);
+  }, [ending]);
 
   return (
     <>
