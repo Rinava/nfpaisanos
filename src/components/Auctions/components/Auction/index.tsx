@@ -11,15 +11,14 @@ const Auction = ({ auction }: AuctionProps) => {
   return (
     <div className={styles.auction}>
       <div className={styles.image_container}>
-        <Button
-          variant='primary'
-          onClick={() => {}}
-          className={styles.bid_button}>
-          Place a Bid
-          <span className={styles.bid_icon}>
-            <BidIcon />
-          </span>
-        </Button>
+        <div className={styles.bid_button}>
+          <Button variant='primary' onClick={() => {}}>
+            Place a Bid
+            <span className={styles.bid_icon}>
+              <BidIcon />
+            </span>
+          </Button>
+        </div>
         <Image
           src={auction.media.image}
           alt=''

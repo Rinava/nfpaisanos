@@ -1,6 +1,6 @@
 input.search {
   margin-bottom: 1.5rem;
-  background: url('/search.svg') no-repeat right;
+  background: url('/images/search.svg') no-repeat right;
   background-position: right 0.75rem center;
   background-size: 1.5rem;
 }

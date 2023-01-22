@@ -1,6 +1,7 @@
 import styles from './styles.module.css';
 import Label from '../Label';
 import { useState, useMemo } from 'react';
+import playSound from '@/utils/playSound';
 
 interface RangeProps {
   value: number;
@@ -21,6 +22,7 @@ const Range = (props: RangeProps) => {
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const value = Number(e.target.value);
+    playSound('/sounds/slider.mp3')
     onChange(value);
   };
 

@@ -31,7 +31,7 @@ const PopularAuction = ({ auction, children }: PopularAuctionProps) => {
           <div className={styles.about}>
             <InfoPill image={authorAvatar} info={author} title='Creator' />
             <InfoPill
-              image='/instant-price.svg'
+              image='/images/instant-price.svg'
               info={instantPrice}
               title='Instant price'
             />

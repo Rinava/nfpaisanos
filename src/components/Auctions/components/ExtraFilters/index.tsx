@@ -38,7 +38,7 @@ const ExtraFilters = ({ minAndMaxPrice }: ExtraFiltersProp) => {
       <Range
         min={minAndMaxPrice.min}
         max={minAndMaxPrice.max}
-        step={(minAndMaxPrice.max - minAndMaxPrice.min) / 100}
+        step={(minAndMaxPrice.max - minAndMaxPrice.min) / 10}
         value={filters.price}
         label='Price range'
         onChange={(value) => setFilters({ type: 'price', payload: value })}
