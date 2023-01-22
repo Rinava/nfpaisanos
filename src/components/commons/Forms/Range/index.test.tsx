@@ -2,6 +2,11 @@ import { render, screen, fireEvent } from '@testing-library/react';
 import '@testing-library/jest-dom';
 import Range from './index';
 
+global.Audio = jest.fn().mockImplementation(() => ({
+  pause: jest.fn(),
+  play: jest.fn(() => Promise.resolve()),
+}));
+
 describe('Range', () => {
   it('should render', () => {
     render(

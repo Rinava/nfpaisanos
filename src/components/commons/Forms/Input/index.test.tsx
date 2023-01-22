@@ -2,6 +2,11 @@ import '@testing-library/jest-dom';
 import { render, screen, fireEvent } from '@testing-library/react';
 import Input from './index';
 
+global.Audio = jest.fn().mockImplementation(() => ({
+  pause: jest.fn(),
+  play: jest.fn(() => Promise.resolve()),
+}));
+
 describe('Search', () => {
   it('should render', () => {
     render(<Input value='a' onChange={jest.fn()} placeholder='b' />);

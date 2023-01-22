@@ -1,6 +1,6 @@
 import styles from './styles.module.css';
 import clsx from 'clsx';
-import playSound from '@/utils/playSound';
+import playSound from '../../../utils/playSound';
 import { motion } from 'framer-motion';
 
 interface ButtonProps {

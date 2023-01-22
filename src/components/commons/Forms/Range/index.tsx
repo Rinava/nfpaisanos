@@ -1,7 +1,7 @@
 import styles from './styles.module.css';
 import Label from '../Label';
 import { useState, useMemo } from 'react';
-import playSound from '@/utils/playSound';
+import playSound from '../../../../utils/playSound';
 
 interface RangeProps {
   value: number;

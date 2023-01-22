@@ -2,6 +2,11 @@ import { render, screen } from '@testing-library/react';
 import '@testing-library/jest-dom';
 import Pills from './index';
 
+global.Audio = jest.fn().mockImplementation(() => ({
+  pause: jest.fn(),
+  play: jest.fn(() => Promise.resolve()),
+}));
+
 describe('Pills', () => {
   it('should render', () => {
     render(
