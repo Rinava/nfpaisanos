@@ -45,6 +45,13 @@ const Layout = ({ children }: Props) => {
           name='description'
           content='NFPaisanos, an NFT marketplace for the NFT community'
         />
+        <meta name='theme-color' content='#141416' />
+        <meta name='chartSet' charSet='utf-8' />
+        <meta name='keywords' content='NFT, Paisanos, auctions, marketplace' />
+        <meta name='author' content='Paisanos' />
+        <meta name='copyright' content='Property of Paisanos' />
+        <meta name='viewport' content='width=device-width, initial-scale=1.0' />
+        <link rel='icon' href='/favicon.png' />
       </Head>
       <div className={styles.container}>
         <Header />
