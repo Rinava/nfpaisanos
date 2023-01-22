@@ -9,8 +9,11 @@ const nextConfig = {
         pathname: '/dvmll0ruo/image/upload/**',
       },
     ],
-    
   },
-}
+};
 
-module.exports = nextConfig
+const withPWA = require('next-pwa')({
+  dest: 'public',
+});
+
+module.exports = withPWA(nextConfig);

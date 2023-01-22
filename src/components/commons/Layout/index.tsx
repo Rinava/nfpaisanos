@@ -47,10 +47,16 @@ const Layout = ({ children }: Props) => {
         />
         <meta name='theme-color' content='#141416' />
         <meta name='chartSet' charSet='utf-8' />
+        <meta httpEquiv='X-UA-Compatible' content='IE=edge' />
         <meta name='keywords' content='NFT, Paisanos, auctions, marketplace' />
         <meta name='author' content='Paisanos' />
         <meta name='copyright' content='Property of Paisanos' />
-        <meta name='viewport' content='width=device-width, initial-scale=1.0' />
+        <meta
+          name='viewport'
+          content='width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no'
+        />
+        <link rel='manifest' href='/manifest.json' />
+        <link rel='apple-touch-icon' href='/favicon.png'></link>
         <link rel='icon' href='/favicon.png' />
       </Head>
       <div className={styles.container}>

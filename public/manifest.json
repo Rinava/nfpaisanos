@@ -1,0 +1,23 @@
+{
+    "name": "NFPaisanos",
+    "short_name": "NFP",
+    "theme_color": "#141416",
+    "background_color": "#141416",
+    "display": "fullscreen",
+    "orientation": "portrait",
+    "scope": "/",
+    "start_url": "/",
+    "icons": [
+      {
+        "src": "favicon.png",
+        "sizes": "128x128",
+        "type": "image/png"
+      },
+      {
+        "src" : "faviconx512.png",
+        "sizes" : "512x512",
+        "type" : "image/png"
+      }
+    ],
+    "splash_pages": null
+  }
