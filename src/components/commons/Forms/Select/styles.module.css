@@ -12,6 +12,8 @@
   border: 2px solid var(--neutrals-3) !important;
   border-radius: 0.75rem !important;
   padding: 0.1875rem 1rem !important;
+  cursor: pointer !important;
+
 }
 
 .menu {
@@ -35,6 +37,7 @@
   margin: 0.3125rem 0 !important;
   border-radius: 0.5rem !important;
   background: transparent !important;
+  cursor: pointer !important;
 }
 
 .option_color .option {
