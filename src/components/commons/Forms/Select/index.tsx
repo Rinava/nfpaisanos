@@ -42,7 +42,8 @@ const Option = ({ ...props }: OptionProps) => (
 );
 
 interface SelectProps {
-  label?: string;
+  label: string;
+  hiddenLabel?: boolean;
   options: {
     value: string;
     label: string;
@@ -60,16 +61,17 @@ const Select = ({
   value,
   type = 'default',
   className,
+  hiddenLabel = false,
 }: SelectProps) => {
   return (
     <div className={clsx(styles.select_container, className)}>
-      {label && (
-        <Label id={`select-${label.replace(/\s/g, '')}`}>{label}</Label>
-      )}
+      <Label
+        id={`select-${label.replace(/\s/g, '')}`}
+        className={clsx(hiddenLabel && styles.hidden_label)}>
+        {label}
+      </Label>
       <ReactSelect
-        aria-labelledby={
-          label ? `select-${label.replace(/\s/g, '')}` : undefined
-        }
+        aria-labelledby={`select-${label.replace(/\s/g, '')}`}
         options={options}
         className={styles.select}
         defaultValue={options[0]}

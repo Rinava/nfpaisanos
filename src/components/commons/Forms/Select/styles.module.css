@@ -3,6 +3,10 @@
   flex-direction: column;
 }
 
+.hidden_label {
+  visibility: hidden;
+}
+
 .control {
   background: transparent !important;
   font-family: 'Poppins' !important;
@@ -13,7 +17,6 @@
   border-radius: 0.75rem !important;
   padding: 0.1875rem 1rem !important;
   cursor: pointer !important;
-
 }
 
 .menu {

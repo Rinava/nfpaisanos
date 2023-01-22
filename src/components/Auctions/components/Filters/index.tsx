@@ -27,6 +27,8 @@ const Filters = () => {
     <div className={styles.filters}>
       <Select
         options={filterItems}
+        label='Sort by'
+        hiddenLabel
         onChange={(value) => setFilters({ type: 'sortBy', payload: value })}
         value={filters.sortBy}
         className={styles.sort}
